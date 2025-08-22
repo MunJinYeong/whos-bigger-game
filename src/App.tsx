@@ -1,8 +1,18 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+
+// --- 타입 정의 ---
+interface Channel {
+  name: string;
+  imageUrl: string;
+  subscribers: number;
+}
+
+// YOUTUBE_DATA 객체의 키들을 기반으로 카테고리 타입을 생성
+type Category = keyof typeof YOUTUBE_DATA;
 
 // --- 목업 데이터 ---
 // 실제 이미지 URL로 교체하여 사용하시면 됩니다.
-const YOUTUBE_DATA = {
+const YOUTUBE_DATA: Record<string, Channel[]> = {
   '예능/코미디': [
     { name: '피식대학', imageUrl: 'https://placehold.co/400x400/3498DB/FFFFFF?text=Psick_Univ', subscribers: 3370000 },
     { name: '빠더너스', imageUrl: 'https://placehold.co/400x400/E74C3C/FFFFFF?text=BDNS', subscribers: 1470000 },
@@ -65,12 +75,28 @@ const YOUTUBE_DATA = {
   ],
 };
 
-const CATEGORIES = Object.keys(YOUTUBE_DATA);
+const CATEGORIES = Object.keys(YOUTUBE_DATA) as Category[];
+
+// --- 컴포넌트 Props 타입 정의 ---
+interface ResultModalProps {
+  message: string;
+  onClose: () => void;
+}
+
+interface MainPageProps {
+  onSelectCategory: (category: Category) => void;
+}
+
+interface GamePageProps {
+  category: Category;
+  onGoMain: () => void;
+}
+
 
 // --- 컴포넌트 ---
 
 // 모달 컴포넌트
-function ResultModal({ message, onClose }) {
+function ResultModal({ message, onClose }: ResultModalProps) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
       <div className="bg-white rounded-2xl p-8 m-4 text-center shadow-2xl transform transition-all scale-100">
@@ -87,7 +113,7 @@ function ResultModal({ message, onClose }) {
 }
 
 // 메인 페이지 컴포넌트
-function MainPage({ onSelectCategory }) {
+function MainPage({ onSelectCategory }: MainPageProps) {
   return (
     <div className="w-full max-w-2xl mx-auto text-center">
       <h1 className="text-5xl md:text-6xl font-extrabold mb-2 text-white">Who's Bigger?</h1>
@@ -108,8 +134,8 @@ function MainPage({ onSelectCategory }) {
 }
 
 // 대결 페이지 컴포넌트
-function GamePage({ category, onGoMain }) {
-  const [channels, setChannels] = useState([]);
+function GamePage({ category, onGoMain }: GamePageProps) {
+  const [channels, setChannels] = useState<Channel[]>([]);
   const [score, setScore] = useState(0);
   const [strikes, setStrikes] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
@@ -138,7 +164,7 @@ function GamePage({ category, onGoMain }) {
   }, [getNewChannels]);
 
   // 구독자 수를 포맷팅하는 함수 (예: 1234567 -> 123만)
-  const formatSubscribers = (num) => {
+  const formatSubscribers = (num: number) => {
     if (num >= 10000) {
       return `${Math.floor(num / 10000)}만`;
     }
@@ -146,7 +172,7 @@ function GamePage({ category, onGoMain }) {
   };
 
   // 다음 라운드를 준비하거나 게임을 종료하는 함수
-  const handleNextStep = (isCorrect) => {
+  const handleNextStep = (isCorrect: boolean) => {
     let currentScore = score;
     let currentStrikes = strikes;
 
@@ -175,7 +201,7 @@ function GamePage({ category, onGoMain }) {
   };
 
   // 채널 선택 핸들러
-  const handleSelect = (selectedIndex) => {
+  const handleSelect = (selectedIndex: number) => {
     if (isRevealed) return;
 
     const correctIndex = channels[0].subscribers > channels[1].subscribers ? 0 : 1;
@@ -236,9 +262,9 @@ function GamePage({ category, onGoMain }) {
 // 메인 App 컴포넌트
 export default function App() {
   const [page, setPage] = useState('main'); // 'main' or 'game'
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
 
-  const handleSelectCategory = (category) => {
+  const handleSelectCategory = (category: Category) => {
     setSelectedCategory(category);
     setPage('game');
   };
@@ -251,7 +277,7 @@ export default function App() {
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-gray-800 via-slate-900 to-black flex justify-center items-center p-4 font-sans">
       {page === 'main' && <MainPage onSelectCategory={handleSelectCategory} />}
-      {page === 'game' && <GamePage category={selectedCategory} onGoMain={handleGoMain} />}
+      {page === 'game' && <GamePage category={selectedCategory!} onGoMain={handleGoMain} />}
     </main>
   );
 }
