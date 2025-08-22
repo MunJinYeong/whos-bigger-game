@@ -14,64 +14,274 @@ type Category = keyof typeof YOUTUBE_DATA;
 // 실제 이미지 URL로 교체하여 사용하시면 됩니다.
 const YOUTUBE_DATA: Record<string, Channel[]> = {
   '예능/코미디': [
-    { name: '피식대학', imageUrl: 'https://placehold.co/400x400/3498DB/FFFFFF?text=Psick_Univ', subscribers: 3370000 },
-    { name: '빠더너스', imageUrl: 'https://placehold.co/400x400/E74C3C/FFFFFF?text=BDNS', subscribers: 1470000 },
-    { name: '숏박스', imageUrl: 'https://placehold.co/400x400/2ECC71/FFFFFF?text=ShortBox', subscribers: 3050000 },
-    { name: '너덜트', imageUrl: 'https://placehold.co/400x400/F1C40F/FFFFFF?text=Nerdult', subscribers: 2790000 },
-    { name: '장삐쭈', imageUrl: 'https://placehold.co/400x400/9B59B6/FFFFFF?text=JangBbiJju', subscribers: 3560000 },
-    { name: '싱글벙글', imageUrl: 'https://placehold.co/400x400/1ABC9C/FFFFFF?text=SingleBungle', subscribers: 1540000 },
-    { name: '빵송국', imageUrl: 'https://placehold.co/400x400/E67E22/FFFFFF?text=BbangSongGuk', subscribers: 1220000 },
-    { name: '보물섬', imageUrl: 'https://placehold.co/400x400/34495E/FFFFFF?text=Treasure_Island', subscribers: 1730000 },
-    { name: '흔한남매', imageUrl: 'https://placehold.co/400x400/7F8C8D/FFFFFF?text=Heunhan', subscribers: 2600000 },
-    { name: '꼰대희', imageUrl: 'https://placehold.co/400x400/D35400/FFFFFF?text=Kkondaehee', subscribers: 1250000 },
+    {
+      name: '침착맨',
+      imageUrl: 'https://yt3.googleusercontent.com/Vaomx_a8Qs9bDHS09zsQBB8BG5rY3LWnvb0zcK4oqThz7oT4PCeZQYyMSsQLGh8pmAwlVAmYew=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2930000,
+    },
+    {
+      name: '카더정원',
+      imageUrl: 'https://yt3.googleusercontent.com/7wgZsN7aqP--_a2sVU9OZYmXZVpAhcsCr8OO8KAeI5Tcv9xUYLGy5H0ObpUgW0hS21cF_sGEjA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1140000,
+    },
+    {
+      name: '피식대학Psick Univ',
+      imageUrl: 'https://yt3.googleusercontent.com/FQ61Pjh2In6lt-nd0o6EtWyCRPIlopBzcm-Pz88CzRXE1gZQ-o1OnV8wL-9IzC4aRr52M6q4z8I=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2800000,
+    },
+    {
+      name: 'MrBeast',
+      imageUrl: 'https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 424000000,
+    },
+    {
+      name: '워크맨-Workman',
+      imageUrl: 'https://yt3.googleusercontent.com/drHybAWMlHQdHt2VtTJCxo3q6riCxt1EBmEfc_S9xH_nPa4r5_8A6q079B1Mn9z-EfIuMzN3mw=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 4170000,
+    },
+    {
+      name: '엔조이커플enjoycouple',
+      imageUrl: 'https://yt3.googleusercontent.com/bgMUfNuZd0Q4Zh5N36NpoVSSnAqEx5KQDENvGjr4YySPyWwb2udOk3ijv1P8lZKL9z1mjqJajA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2580000,
+    },
+    {
+      name: '감스트GAMST',
+      imageUrl: 'https://yt3.googleusercontent.com/rELiEJEE17me3IkoI2bJFFdMssJ4gPnnNMyUbhj4sHcHdPkm_jeP_tpmMhzSGlo0epoT0R0ZUg=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2910000,
+    },
+    {
+      name: '피지컬갤러리',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_np_t2ohZ3EtGivS1pR8DBYlZEXe-5sI4NmJH7sq9Jylko=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 3080000,
+    },
+    {
+      name: '노빠꾸탁재훈',
+      imageUrl: 'https://yt3.googleusercontent.com/8kj8HO8QIpjNfITdU0eILgyqOHuODUhILPhEKJ-JcpUFMBh7I0uSmA-gcEFI-aIVnkOzVmUvzQ=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1860000,
+    },
+    {
+      name: '꼰대희',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_kvXF8ikeDs5sSIjyl4JuSceqwpAJlslX8ieu5rYmjypA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1920000,
+    },
   ],
   '게임': [
-    { name: 'Faker', imageUrl: 'https://placehold.co/400x400/C0392B/FFFFFF?text=Faker', subscribers: 1980000 },
-    { name: '감스트', imageUrl: 'https://placehold.co/400x400/2980B9/FFFFFF?text=Gamst', subscribers: 2360000 },
-    { name: '우왁굳', imageUrl: 'https://placehold.co/400x400/27AE60/FFFFFF?text=Woowakgood', subscribers: 1710000 },
-    { name: '한동숙', imageUrl: 'https://placehold.co/400x400/F39C12/FFFFFF?text=Handongsuk', subscribers: 720000 },
-    { name: '풍월량', imageUrl: 'https://placehold.co/400x400/8E44AD/FFFFFF?text=Poong', subscribers: 570000 },
-    { name: '김성태', imageUrl: 'https://placehold.co/400x400/16A085/FFFFFF?text=KimSeongTae', subscribers: 640000 },
-    { name: '침착맨', imageUrl: 'https://placehold.co/400x400/D35400/FFFFFF?text=ChimChakMan', subscribers: 2490000 },
-    { name: '따효니', imageUrl: 'https://placehold.co/400x400/2C3E50/FFFFFF?text=DDaHyoNi', subscribers: 540000 },
-    { name: 'Gamer M', imageUrl: 'https://placehold.co/400x400/7F8C8D/FFFFFF?text=Gamer_M', subscribers: 1100000 },
-    { name: 'Gamer N', imageUrl: 'https://placehold.co/400x400/BDC3C7/FFFFFF?text=Gamer_N', subscribers: 980000 },
+    {
+      name: 'LCK',
+      imageUrl: 'https://yt3.googleusercontent.com/RErzRqJSsX0DY_IGc2Hj7SDCRpjB4p_ta8H5i4Twj66Jey7JC904Nl3P6cxhW260fqeImBpo=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1610000,
+    },
+    {
+      name: '괴물쥐 유튜브',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_n2j3w7B8DpULUI9Z-GIFO2HVj487vk_hKU9Epsab-Q6qo=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1190000,
+    },
+    {
+      name: '이도원',
+      imageUrl: 'https://yt3.googleusercontent.com/Y81c85Xj_HXEXM6aH9RYn2twlj51IGU2uTIJIFGz0EdaxvFHNpTVgSdy0Zy8hKSz9PWzjl_e7u0=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 450000,
+    },
+    {
+      name: '양띵 유튜브',
+      imageUrl: 'https://yt3.googleusercontent.com/lSaOJx_bSyAgbKumAM68OLutYoxHcISPDk1Z_WnXK2QOt0Fv7nsYKQjsnEGAMPfIf946sxEW=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1700000,
+    },
+    {
+      name: '혜안',
+      imageUrl: 'https://yt3.googleusercontent.com/f7NJo7bEkaGaTeGFkEveKC9aC52HCvaDa6li7v3x_sDdAguKnt880AiF30qB0s_PqSwlTJc4Mg=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2800000,
+    },
+    {
+      name: '뜨뜨뜨뜨',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_n6164VUQu-JLfxBAuShtMNwo07TubFghcDOq3dTkFaHWTg=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1490000,
+    },
+    {
+      name: '랄로',
+      imageUrl: 'https://yt3.googleusercontent.com/Y7S_FlRrIO4uEUgtmlPSR_1lqFE4WuAML-nGkvSaM3IZg6nMdTRaeBht-PB2x35JBXrpyGC_WQ=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1300000,
+    },
+    {
+      name: '우왁굳',
+      imageUrl: 'https://yt3.googleusercontent.com/8qJyQpSS6YLADyM5T6afKkpCsGtC3x_4_SSJWTNNO3qKX9FmlRRBZbO7VFy8IegO_717mU7zaqM=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1650000,
+    },
+    {
+      name: 'T1',
+      imageUrl: 'https://yt3.googleusercontent.com/KrTYZuIky3flbZ_AKp-uj19CTdUMVIM8jXrM3_1ooAmbzsJTlNkAWvO0Ack6Al79uy--euJTIA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1580000,
+    },
+    {
+      name: '우주하마',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_m-J9C5Jd0qnjDTXqQ1137-FwYV-ckNNhkbblFuBp65t5Y=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2130000,
+    },
+    {
+      name: '악동 김블루',
+      imageUrl: 'https://yt3.googleusercontent.com/cjzLIxTeDuG1MBi89c9-RFp39BUjpxS65XuvzrwdqLdEQ0HUzAUiMHBvkQMayIYu4App3O9Wkw=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2140000,
+    },
   ],
   '먹방': [
-    { name: 'tzuyang쯔양', imageUrl: 'https://placehold.co/400x400/E74C3C/FFFFFF?text=Tzuyang', subscribers: 9340000 },
-    { name: '문복희', imageUrl: 'https://placehold.co/400x400/3498DB/FFFFFF?text=MoonBokhee', subscribers: 9110000 },
-    { name: '햄지', imageUrl: 'https://placehold.co/400x400/2ECC71/FFFFFF?text=Hamzy', subscribers: 12500000 },
-    { name: '히밥', imageUrl: 'https://placehold.co/400x400/F1C40F/FFFFFF?text=Heebab', subscribers: 1610000 },
-    { name: '입짧은햇님', imageUrl: 'https://placehold.co/400x400/9B59B6/FFFFFF?text=Hatnim', subscribers: 1760000 },
-    { name: '산적TV 밥굽남', imageUrl: 'https://placehold.co/400x400/1ABC9C/FFFFFF?text=BobGupNam', subscribers: 1300000 },
-    { name: '나도', imageUrl: 'https://placehold.co/400x400/E67E22/FFFFFF?text=Nado', subscribers: 2680000 },
-    { name: '애주가TV참PD', imageUrl: 'https://placehold.co/400x400/34495E/FFFFFF?text=ChamPD', subscribers: 1210000 },
-    { name: '꿀키', imageUrl: 'https://placehold.co/400x400/7F8C8D/FFFFFF?text=Honeykki', subscribers: 2500000 },
-    { name: '홍사운드', imageUrl: 'https://placehold.co/400x400/D35400/FFFFFF?text=HONG_SOUND', subscribers: 2000000 },
+    {
+      name: 'tzuyang쯔양',
+      imageUrl: 'https://yt3.googleusercontent.com/X33l_vqFwjzDTwlXilfakO6lwf2zz_JjDozCaBHkUS57e2XzE8IjL9v9v_Q4v_my-T5tpt24jA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 12400000,
+    },
+    {
+      name: '[햄지]Hamzy',
+      imageUrl: 'https://yt3.googleusercontent.com/iLXgJAWo5zn0fBY0RgKXkxgTtkzTcDXjgeriRAElnqNm9Zsf7VySgOVq7WNPCJEIxXm266XupQ=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 13800000,
+    },
+    {
+      name: 'Hongyu ASMR 홍유',
+      imageUrl: 'https://yt3.googleusercontent.com/s2Llndi5lUM9IAP4bpzCiVtrbuTHQ8rqAaPixulaE2gqM8ljDSp9Phy9ynAt5fA1IZpGPx_jxA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 16600000,
+    },
+    {
+      name: 'Jane ASMR 제인',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_m_UPPk8SldYo68iRWI2r_e5L-0IgLWYBthGLWASNEX_GY=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 18400000,
+    },
+    {
+      name: '설기양SULGI',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_mujghlCKM2BIbBVJ_gYPD617iJ6RM5oZffWjYBJGGe-_Y=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 15700000,
+    },
+    {
+      name: '문복희 Eat with Boki',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_mTvyQqvy_sv5elJeZB6-6h8EgQFWFHB6Ib_6eBa7sbuYM=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 10600000,
+    },
+    {
+      name: '입짧은햇님',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_n8GWMXO3-vfaHAUr-apAL306G77SNhhqkU4R4xD6boUyk=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1750000,
+    },
+    {
+      name: '히밥heebab',
+      imageUrl: 'https://yt3.googleusercontent.com/uk_IsheOt6Jv-SeSCAKIiNR6mcY3Y3gzF5YfjSBQa9Fy_MvGXeXKCf-cFqy5k7POLz6H2OhL=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1690000,
+    },
+    {
+      name: '영국남자 Korean Englishman',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_l3NBOaLOnWVdNU7jOKWzusqmRxIdfsMFDyqugLcRM6dvs=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 6150000,
+    },
+    {
+      name: '상해기SangHyuk',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_loblfEWm2wIo7ajfx1VeSAZhXrHDBWwxgmHQxNisbyw1Y=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1640000,
+    },
+    {
+      name: 'GONGSAM TABLE 이공삼',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_l6JZuD6XU65aVvlI0Wf79qltdvQFvExNwe1XkrYvpBY4A=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 14600000,
+    },
   ],
   '뷰티/패션': [
-    { name: 'PONY Syndrome', imageUrl: 'https://placehold.co/400x400/9B59B6/FFFFFF?text=PONY', subscribers: 5930000 },
-    { name: 'RISABAE', imageUrl: 'https://placehold.co/400x400/3498DB/FFFFFF?text=RISABAE', subscribers: 2240000 },
-    { name: '회사원A', imageUrl: 'https://placehold.co/400x400/E74C3C/FFFFFF?text=CalaryGirl_A', subscribers: 1200000 },
-    { name: 'ssin', imageUrl: 'https://placehold.co/400x400/2ECC71/FFFFFF?text=Ssin', subscribers: 1500000 },
-    { name: '조효진', imageUrl: 'https://placehold.co/400x400/F1C40F/FFFFFF?text=HyoJin', subscribers: 1810000 },
-    { name: '한별', imageUrl: 'https://placehold.co/400x400/1ABC9C/FFFFFF?text=Hanbyul', subscribers: 910000 },
-    { name: '옆집언니 최실장', imageUrl: 'https://placehold.co/400x400/E67E22/FFFFFF?text=ChoiSiljang', subscribers: 840000 },
-    { name: '뽐뽐뽐', imageUrl: 'https://placehold.co/400x400/34495E/FFFFFF?text=Bbomx3', subscribers: 820000 },
-    { name: '오늘의하늘', imageUrl: 'https://placehold.co/400x400/7F8C8D/FFFFFF?text=Haneul', subscribers: 800000 },
-    { name: '소신사장', imageUrl: 'https://placehold.co/400x400/D35400/FFFFFF?text=Sosin', subscribers: 700000 },
+    {
+      name: '지냐 Jinyaa',
+      imageUrl: 'https://yt3.googleusercontent.com/SCFCGjtwae4li0M1B3mydzu_QvS2-qe0JtKqg2EsMQiOp4OentZIALyDpefxmK1wsKPIs0Vo=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 330000,
+    },
+    {
+      name: 'LeoJ Makeup',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_n_prkAS2s-jB2JHHI7g0tstz6iohY_6qBqQ6lxKra2vYg=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1430000,
+    },
+    {
+      name: 'RISABAE',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_lB8AyOqh_MxT6LcGodOH8flrInTGkPO8KWwrVM5dl7Jhw=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2610000,
+    },
+    {
+      name: '시네 si-ne',
+      imageUrl: 'https://yt3.googleusercontent.com/SXdSzdVxP5O0q5Ymbi_fty7Pc8YGOHsRP9CmFtACHCkL8ZQeSc_w-NYknuVVplDJZV5YQfYB=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 360000,
+    },
+    {
+      name: '톡신TOXIN',
+      imageUrl: 'https://yt3.googleusercontent.com/CDLf4X5uNGUflXzex003BAUP89RsgMiI-kibbMuXb3yUxznOhR2jNBGfWIlcrGYg_EQFu2temA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 200000,
+    },
+    {
+      name: '효진조 Hyojin Cho',
+      imageUrl: 'https://yt3.googleusercontent.com/wz3jXQVNHXBMac8bD_qPRLFpBvVfGye3P2HaJesstPC333tqP1iN77sfZyGeFu8qPAlNE4Kk=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1890000,
+    },
+    {
+      name: '콩언니',
+      imageUrl: 'https://yt3.googleusercontent.com/XArFEiRcJUO8hgYasmIg6zgzQ0LOqNk-7bapvsB5ETsVkZtqHUGucJngT0XrDgdJfyUUfmj7lU4=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 440000,
+    },
+    {
+      name: 'PONY Syndrome',
+      imageUrl: 'https://yt3.googleusercontent.com/KIuukC7yn-HmxrJlLYy0LNwmJLlv3iEwtn6jSP2iFbn6EdXcU9HeO7lSqWF7FTzH3_njUeyjxQ=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 5870000,
+    },
+    {
+      name: 'kiu기우쌤',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_n_q5ESqELSUUy8YohN-Qj0FVABnlcvxAB6wdPvIdAx1dw=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1610000,
+    },
+    {
+      name: '남진 Douyin Makeup',
+      imageUrl: 'https://yt3.googleusercontent.com/GwGghK4jMFkuCkuRdFEL1WOF_4MC81Hz2r0ItUSmGhsQFYoKnR2OOXdueP_W0JxPl-LgjsU2_w=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1840000,
+    },
   ],
   '연예인Vlog': [
-    { name: '백종원', imageUrl: 'https://placehold.co/400x400/27AE60/FFFFFF?text=Baek_JongWon', subscribers: 5800000 },
-    { name: '강민경', imageUrl: 'https://placehold.co/400x400/2980B9/FFFFFF?text=Kang_Minkyung', subscribers: 1200000 },
-    { name: '신세경', imageUrl: 'https://placehold.co/400x400/C0392B/FFFFFF?text=Shin_Sekyung', subscribers: 1500000 },
-    { name: '혜리', imageUrl: 'https://placehold.co/400x400/F39C12/FFFFFF?text=Hyeri', subscribers: 1820000 },
-    { name: '솔라시도', imageUrl: 'https://placehold.co/400x400/8E44AD/FFFFFF?text=Solarsido', subscribers: 3440000 },
-    { name: '이승기', imageUrl: 'https://placehold.co/400x400/16A085/FFFFFF?text=Lee_SeungGi', subscribers: 1220000 },
-    { name: '윤은혜', imageUrl: 'https://placehold.co/400x400/D35400/FFFFFF?text=Yoon_Eunhye', subscribers: 700000 },
-    { name: '성시경', imageUrl: 'https://placehold.co/400x400/2C3E50/FFFFFF?text=Sung_Sikyung', subscribers: 1860000 },
-    { name: '정은지', imageUrl: 'https://placehold.co/400x400/7F8C8D/FFFFFF?text=Jung_Eunji', subscribers: 800000 },
-    { name: '아이유', imageUrl: 'https://placehold.co/400x400/BDC3C7/FFFFFF?text=IU', subscribers: 8900000 },
+    {
+      name: '신세경 sjkuksee',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_msKLPHR2VGmhyx0SZJWKHC_wN-mPhWPHqxPBabNA2s_w=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1450000,
+    },
+    {
+      name: '김종국 GYM JONG KOOK',
+      imageUrl: 'https://yt3.googleusercontent.com/dQpGedX7jQIIQ-BJcj3dGroHLb_cY5Mx8bDvmyD-oJO5_NQkR6W5OlsCuqmNrWh3cGq3KvyxmYA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 3160000,
+    },
+    {
+      name: '걍밍경',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_mieTH2WSE4oBMmczfLHB3HhikzOg1nz9tFD-MLad93Xnw=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1490000,
+    },
+    {
+      name: '유병재',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_ny3_7x7wGswXASawBIme4eazHVZAFR_3Dt-gw6p_zBu9c=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1650000,
+    },
+    {
+      name: '시즌비시즌 Season B Season',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_mu_REdc49DJO0BGmPghKJUufarEWnO1zWPrepb0iE9M2Q=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1740000,
+    },
+    {
+      name: '성시경 SUNG SI KYUNG',
+      imageUrl: 'https://yt3.googleusercontent.com/k7vcgjUvUjwwzbWbZ3qDWWzLCXYlNVfNIkMLWfOcDrWiZ8GTka-2tyj6rjUBv3n9Cl1yWo8d=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2140000,
+    },
+    {
+      name: '혜리',
+      imageUrl: 'https://yt3.googleusercontent.com/okeFYw3g3V1v_9hWnSmc1frBSmJAvJAj3DSrRQiVhVFjs07t4tJIh3qRKWeBDPIZmR_96jPjL0k=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 2320000,
+    },
+    {
+      name: '공부왕찐천재 홍진경',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_mXJxSXiJa2E26VH10eCDts0qd7FQszSNbx9tWxpHkD4w=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1770000,
+    },
+    {
+      name: '탱구TV',
+      imageUrl: 'https://yt3.googleusercontent.com/ytc/AIdro_lhOx32_yFLo2olaO5kxrbTNOelggbUWpMLMcmdohFOZA=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1190000,
+    },
+    {
+      name: '박서준 Record PARK\'s',
+      imageUrl: 'https://yt3.googleusercontent.com/YBH9YlxKuvCbOgcXdDQic3maAhqqMbzKKqg3UMiY4lHgUERV1JAo69u1hwnymLYIi81hgtRqjQ=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1930000,
+    },
   ],
 };
 
@@ -275,9 +485,9 @@ export default function App() {
   };
 
   return (
-    <main className="min-h-screen w-full bg-gradient-to-br from-gray-800 via-slate-900 to-black flex justify-center items-center p-4 font-sans">
-      {page === 'main' && <MainPage onSelectCategory={handleSelectCategory} />}
-      {page === 'game' && <GamePage category={selectedCategory!} onGoMain={handleGoMain} />}
-    </main>
+    <main className="min-h-screen w-full bg-gradient-to-b from-[#161616] to-[#2D0709] flex justify-center items-center p-4 font-sans">
+  {page === 'main' && <MainPage onSelectCategory={handleSelectCategory} />}
+  {page === 'game' && <GamePage category={selectedCategory!} onGoMain={handleGoMain} />}
+</main>
   );
 }
